@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="Web_Service_Monitor_Tile.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Web_Service_Monitor_Tile"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <x:Double x:Key="StandardTextSize">18</x:Double>
+    </Page.Resources>
+
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="Connection Settings" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="72" FontWeight="Bold" Margin="10,0,0,0"/>
+        <TextBlock HorizontalAlignment="Left" Margin="10,145,0,0" TextWrapping="Wrap" Text="Web Service REST Path" VerticalAlignment="Top" FontSize="{StaticResource StandardTextSize}" ToolTipService.ToolTip="Only sends GET request"/>
+        <TextBox x:Name="txtConnection" HorizontalAlignment="Left" Margin="10,172,0,0" TextWrapping="Wrap" VerticalAlignment="Top" AcceptsReturn="True" Height="73" Width="418"/>
+        <Button x:Name="btnSave" Content="Save Settings" HorizontalAlignment="Left" Margin="305,279,0,0" VerticalAlignment="Top" Click="btnSave_Click"/>
+        <Button x:Name="btnTest" Content="Test" HorizontalAlignment="Left" Margin="10,279,0,0" VerticalAlignment="Top" Click="btnTest_Click"/>
+        <TextBox x:Name="txtTestResults" HorizontalAlignment="Left" Margin="10,363,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="159" Width="418" AcceptsReturn="True" Visibility="Collapsed"/>
+        <ProgressRing x:Name="progTest" HorizontalAlignment="Left" Margin="101,279,0,0" VerticalAlignment="Top" RenderTransformOrigin="0,0"/>
+
+    </Grid>
+</Page>
